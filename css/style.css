@@ -23,6 +23,7 @@
     width: 469px;
     height: 214px;
     background-color: #ffffff;
+    display: block;
 }
 .main-header__title {
 	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
@@ -43,6 +44,9 @@
 }
 .main-header__list li:before{
     content: '✔';
+    font-size: 19px;
+    padding-right: 10px;
+    font-weight: 900;
 }
 /******** about  *******/
 .about {
@@ -83,16 +87,49 @@
 	background-color: #f5f5f5;
     width: 100%;
     padding: 50px 44px 33px 44px;
+    display: flex;
+    flex-wrap: wrap;
     
 }
-.pluses__wraper {
-	display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  height: 100%;
+.pluses__details{
+    position: relative;
+    margin-left: 50px;
+    margin-bottom: 35px;
+}
+.pluses__title-text::-webkit-details-marker {
+    display: none;
+    
+}
+.pluses__title-text, .pluse__text {
+	outline: none;
+    color: #333333;
+    font-family: "Arial";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.pluses__title-text:before {
+    background: #445161; 
+    content: "+"; 
+    width: 32px;
+    height: 32px;
+    color: #fff; 
+    display: block;
+    position: absolute;
+    top:5px ;
+    left:-40px ;
+    font-size: 1.7em;
+    line-height: 33px;
+    text-align: center;
+}
+details[open] summary:before {
+    content: "-";
+    line-height: 27px;
 }
 .pluses__title {
-	text-align: center;
+    display: block;
+    width: 100%;
+    text-align: center;
     color: #445161;
     font-family: "Arial";
     font-size: 30px;
@@ -100,21 +137,10 @@
     line-height: 36px;
     margin-bottom: 29px;
 }
-.pluses__items {
-	color: #333333;
-    font-family: "Arial";
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    width: 600px;
-    margin-bottom: 35px;
-}
-.pluses__img{
-    width: 32px;
-    height: 32px;
-    background-color: #445161;
-    margin: 7px 9px 39px 0px;
-    float: left;
+
+.pluses__wraper {
+    width: 50%;
+    box-sizing: border-box; 
 }
 
 /*********** scrinshot  *****/
@@ -256,8 +282,7 @@
 /************* BUY  ************/
 
 .buy{
-    width: 100%;
-    height: 656px; 
+    width: 100%; 
     padding: 50px;
 }
 .buy__title {  
@@ -328,8 +353,9 @@
     font-weight: 400;
     line-height: 24px;
     text-align: left;
-    margin-left: 34px;
+    margin-left: 20px;
     margin-top: 19px;
+    list-style-position: inside;
 
 }
 span {
@@ -355,8 +381,15 @@ span {
     padding-top: 14px;
     padding-bottom: 13px;
 }
-
-
+.buy__btn:hover {
+	background-color: #7b8898;
+	color: #3e4d60;
+}
+.buy__btn:active {
+	background-color: #7b8898;
+    color: #3e4d60;
+    box-shadow: 5px 5px 10px #7B88DA;
+}
 /********** CONTACT *********/
 
 .contacts {
@@ -384,22 +417,38 @@ input[type=text]{
     border-radius: 5px;
     margin-bottom: 20px;
     padding-left: 10px;
+    color: #445162;
+    font-family: "Arial";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
 }
 input[type=email]{
     width: 500px;
     height: 40px;
     background-color: #ffffff;
-     border-radius: 5px;
+    border-radius: 5px;
     margin-bottom: 20px;
     padding-left: 10px;
+    color: #445162;
+    font-family: "Arial";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
 }
-input[type=textarea]{
+textarea{
     width: 500px;
     height: 170px;
     background-color: #ffffff;
     border-radius: 5px;
     margin-bottom: 20px;
     padding-left: 10px;
+    padding-top: 13px;
+    color: #445162;
+    font-family: "Arial";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
 }
 
 .contact__form {
@@ -419,23 +468,47 @@ input[type=textarea]{
     font-weight: bold;
     line-height: 24px;
     text-transform: uppercase;
+    border: 0;
+    outline: none;
 }
-
+.form__btn:hover {
+	background-color: #7b8898;
+	color: #3e4d60;
+    outline: none;
+}
+.form__btn:active {
+	background-color: #7b8898;
+    color: #3e4d60;
+    box-shadow: 5px 5px 10px #7B88DA;
+}
 .contact__wraper {
     display: flex;
     justify-content: space-between;
 }
 
 .social__icons li {
-    color: #ffffff;
+    
+    list-style-type: none;
+    margin-bottom: 29px;
+}
+.social__icons a{
+	color: #ffffff;
     font-family: "Arial";
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     margin-right: 250px;
-    list-style-type: none;
-    margin-bottom: 29px;
+    text-decoration: none;
 }
-.fa {
-    margin-right: 10px; 
+
+
+.bottum__text {
+    text-align: center;
+    color: #445162;
+    font-family: "Arial";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    background: #f5f5f5;
 }
