@@ -396,7 +396,7 @@ span {
     width: 1280px;
     height: 509px;
     background-color: #445162;
-    padding-top:53px; 
+    padding: 53px 50px 0 50px;
 }
 
 .contact__title {
@@ -450,17 +450,16 @@ textarea{
     font-weight: 400;
     line-height: 24px;
 }
-
 .contact__form {
-    width: 500px;
+    margin-right: 45px;
     margin-left: 250px;
 }
-
 .form__btn {
     width: 140px;
     height: 40px;
     background-color: #ffffff;
     margin-left: 180px;
+    margin-top: 15px;
     border-radius: 5px;
     color: #445162;
     font-family: "Arial";
@@ -485,7 +484,6 @@ textarea{
     display: flex;
     justify-content: space-between;
 }
-
 .social__icons li {
     
     list-style-type: none;
@@ -500,8 +498,6 @@ textarea{
     margin-right: 250px;
     text-decoration: none;
 }
-
-
 .bottum__text {
     text-align: center;
     color: #445162;
@@ -512,3 +508,57 @@ textarea{
     letter-spacing: 0.3px;
     background: #f5f5f5;
 }
+.social__icons-items {
+	position: relative;
+    margin-left: 40px;
+}
+.skype:before{
+    content: "";
+    width: 26px;
+    height: 26px;
+    display: block;
+    background-image: url(../img/skype_icon.png);
+    background-repeat: no-repeat;
+    position: absolute;
+}
+.icq:before{
+    content: "";
+    width: 26px;
+    height: 26px;
+    display: block;
+    background-image: url(../img/icq_icon.png);
+    background-repeat: no-repeat;
+    position: absolute;
+}
+.email:before{
+    content: "";
+    width: 26px;
+    height: 26px;
+    display: block;
+    background-image: url(../img/email_icon.png);
+    background-repeat: no-repeat;
+    position: absolute;
+}
+.phone:before{
+    content: "";
+    width: 26px;
+    height: 26px;
+    display: block;
+    background-image: url(../img/phone_icon.png);
+    background-repeat: no-repeat;
+    position: absolute;
+}
+.social__wraper {
+    display: flex;
+    flex-direction: column;
+}
+.icon-items {
+    color: #ffffff;
+    font-size: 50px;
+    line-height: 24px;
+    margin-left: -15px;   
+}
+.icon-items:hover {
+	color: #7b8898;
+}
+
